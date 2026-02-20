@@ -1,0 +1,25 @@
+Changes:
+- Done. Add AUIPC - U type
+- Done. Add "slti" and "sltiu" - I type
+-Done.Replace 'i' by 'l' - Load - In type of func and also in class I_type
+- Done. Remove all "sd" and "ld" and "lwu"- Store and load
+- Done. Add "slt" and "sltu" - R type
+1. Done Line 167 to 181: Change in opcode from "0000000"
+2.Done. Line 209: Insert +" " while concatenation
+3. Done. Line 217 to 220: Change in funct3 values from "000"
+4. Done. Line 237 to 242: Change in funct3 values from "000"
+5. Done. Line 264: Add comment 
+18. Done. Line 8: Add comment in or part
+6. Done. Line 353:Replace imm with rs2
+7. Done. Line 355: Replace imm with rs2 && I.get with R.get
+11. Done. Line 365 - 375 and Line 297:Remove the else j cases 
+12. Done. Line 343: Make case 'J' similar to B, i.e. include labels
+13. Done. Line 327: Add i++; to split() function
+14. Done. Line 302:Add continue when label is present
+15. Done. Line 378: Remove location+=4; when labels are present
+17. Done. Change opcodes for SB type class
+9. Done. Change the SB class .get function
+10. Done. Change binary function to accommodate for negative values using 2's complement
+16. Done. Make a separate case for load in I - type rd,imm(rs1) using braces format
+19. Done. Change get function in I_type for funct6 shamt in srai and other shifts
+20. Done. Modify immediate value conversions in both UJ and SB . get()
