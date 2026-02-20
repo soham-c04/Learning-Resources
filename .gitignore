@@ -14,3 +14,6 @@ correctAnswer
 # Windows
 .vscode/
 .idea/
+
+# Files > 100MB
+Ishan Advanced Algorithm - 4.pdf
