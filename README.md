@@ -1,6 +1,6 @@
-# What and How I learnt ?
+# Learning Resources
 
-Mostly this is for my future reference, if needed for some other project. Track record of history.
+Courses, Playlists and Other Study Materials for various topics and subjects (Primarily CSE based).
 
 ## Table of Contents
 - [**Programming Language**](https://github.com/soham-c04/What-and-How-I-learnt?tab=readme-ov-file#Programming-Language)
@@ -21,6 +21,8 @@ Mostly this is for my future reference, if needed for some other project. Track 
   - [Computer Organization and Architecture](https://github.com/soham-c04/What-and-How-I-learnt?tab=readme-ov-file#Computer-Organization-and-Architecture)
   - [Database Management System](https://github.com/soham-c04/What-and-How-I-learnt?tab=readme-ov-file#Database-Management-System)
   - [Operating Systems](https://github.com/soham-c04/What-and-How-I-learnt?tab=readme-ov-file#Operating-Systems)
+  - [Formal Languages and Automata Theory](https://github.com/soham-c04/What-and-How-I-learnt?tab=readme-ov-file#Formal-Languages-and-Automata-Theory)
+- [**Others**](https://github.com/soham-c04/What-and-How-I-learnt/tree/main/Others)
 <br><br>
 
 ## Programming Language
@@ -138,4 +140,9 @@ Advanced Computer Organization and Architecture - 7th Semester.
 ### [<ins>Operating Systems</ins>](https://github.com/soham-c04/What-and-How-I-learnt/tree/main/Operating%20Systems)
 5th Semester.
 - [**Playlist**](https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p)
+
+
+### [<ins>Formal Languages and Automata Theory</ins>](https://github.com/soham-c04/What-and-How-I-learnt/tree/main/Others/CORE/Formal%Languages%and%Automata%Theory)
+5th Semester.
+- [**Playlist**](https://youtube.com/playlist?list=PLxCzCOWd7aiFM9Lj5G9G_76adtyb4ef7i)
 </details>
