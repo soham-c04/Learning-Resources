@@ -1,0 +1,10 @@
+FIRST
+S -> ( a d 
+U -> ( a d 
+V -> 0 a 
+W -> 0 c 
+FOLLOW
+S -> $ ) b 
+U -> $ ) a b c 
+V -> $ ) b c 
+W -> $ ) b 
