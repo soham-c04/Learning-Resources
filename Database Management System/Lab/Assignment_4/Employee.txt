@@ -1,0 +1,10 @@
+1	John	Smith	john@google.com	123456789	1965-01-09	1	30000	2	1	10
+2	Frank	Wong	frank@gmail.com	333445555	1955-12-08	4	40000	3	1	10
+3	Alicia	Zelaya	alici@gmail.com	999887777	1968-01-19	4	25000	5	4	20
+4	Jenni	Wall	jenni@gmail.com	987654321	1941-06-20	1	43000	7	4	20
+5	Ramesh	Narayan	rames@gmail.com	666884444	1962-09-15	2	38000	11	1	10
+6	Joyce	English	joyce@gmail.com	453453453	1972-07-31	2	25000	13	1	10
+7	Ahmad	Jabbar	ahmad@gmail.com	987987987	1969-03-29	5	25000	17	1	10
+8	James	Borg	james@gmail.com	888665555	1937-11-10	3	75000	19	9	30
+9	Thomas	Ding	thoma@gmail.com	768768768	1947-08-15	5	35000	23	9	30
+10	Ding	Liren	dingg@gmail.com	123454321	2004-08-14	3	60000	29	1	10

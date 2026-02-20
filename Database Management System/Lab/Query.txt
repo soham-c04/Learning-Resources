@@ -1,0 +1,5 @@
+create table Jobs
+(Job_id int PRIMARY KEY,
+Job_Title Varchar(20),
+Min_Salary int,
+Max_Salary int);

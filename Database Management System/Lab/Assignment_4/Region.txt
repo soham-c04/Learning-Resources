@@ -1,0 +1,2 @@
+1	Asia West
+2	Asia East

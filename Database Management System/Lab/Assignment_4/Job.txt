@@ -1,0 +1,5 @@
+1	Managerial	30000	43000
+2	Clerk	25000	38000
+3	Drafter	60000	75000
+4	Blacksmith	25000	40000
+5	Goldsmith	25000	35000

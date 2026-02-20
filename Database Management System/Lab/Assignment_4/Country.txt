@@ -1,0 +1,2 @@
+1	India	1
+2	Japan	2
