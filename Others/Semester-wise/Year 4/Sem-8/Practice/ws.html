@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <h1>WS</h1>
+        <input placeholder = "asdf">
+        <button>Send</button>
+        <ul>List</ul>
+        <script>
+            const ws = new WebSocket("ws://localhost:2000");
+            const input = document.querySelector('input')
+            const output = document.querySelector('ul');
+            
+            input.onkeydown = (e) =>{
+                if(e.key == 'Enter') ws.send(input.data);
+            }
+
+            ws.onmessage = (d) => output.innerHTML = d.data;
+        </script>
+    </body>
+</html>
