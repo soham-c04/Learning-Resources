@@ -21,16 +21,19 @@ ll rand_num(ll a, ll b){
 }
 
 int main(int argc, char* argv[]){
-	int T = rand_num(1,10);
-	cout<<T<<"\n";
-	while(T--){
-		int n=rand_num(2,7);
-		set<int> s;
-		f(n) s.insert(rand_num(1,20)+1);
-		n = s.size();
-		cout<<n<<"\n";
-		for(auto t:s) cout<<t<<" ";
-		cout<<"\n";
+	cout<<"1\n";
+	int n = 2*rand_num(8,13);
+	int pf=0;
+	cout<<n<<"\n";
+	f(n){
+		char c;
+		if(pf==0) c='(';
+		else if(n-i==pf) c=')';
+		else c=(rand_num(0,1)? '(':')');
+		cout<<c;
+		if(c=='(') pf++;
+		else pf--;
 	}
+	cout<<"\n";
 	return 0;
 }

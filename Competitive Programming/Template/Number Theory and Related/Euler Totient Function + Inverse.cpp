@@ -6,10 +6,16 @@ typedef long long ll;
 const int N=2e5+1;
 int phi[N];
 
+int ETF(int n, vector<int> &prime_factors){
+	for(int p:prime_factors) n -= n/p;
+	return etf;
+}
+
 void ETF(){
 	f(N) phi[i]=i;
 	for(int i=2;i<N;i++) if(phi[i]==i) for(int j=i;j<N;j+=i) phi[j]-=phi[j]/i;
 }
+
 int Phi(int n){
 	// Finds in O(sqrt(N)) for a single n.
 	int ans=n;

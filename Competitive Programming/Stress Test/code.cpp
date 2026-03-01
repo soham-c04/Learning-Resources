@@ -23,6 +23,49 @@ typedef multiset<ll> msll;
 #define YN(flag) cout<<(((flag))? "YES\n":"NO\n");
 #define ceil(a,b) (((a)+(b)-1)/(b))
 
+static constexpr int M = 1e9+7;
+#define OPR operator
+struct Mint{
+	int x;
+	Mint(int a=0): x(a){}		// Assumes `a` always in range [0,M-1]
+	Mint(ll a): x(a%M){}
+
+	Mint OPR+(const Mint &other)const{ int y=x+other.x; return Mint((y<M)? y:y-M);}
+	Mint OPR-(const Mint &other)const{ int y=x-other.x; return Mint((y>=0)? y:y+M);}
+	Mint OPR*(const Mint &other)const{ return Mint(x*1ll*other.x);}
+	Mint OPR^(const Mint &other)const{ int ans=1,b=other.x,a=x; while(b){if(b&1) ans=(ans*1ll*a)%M; a=(a*1ll*a)%M; b>>=1;} return ans;}
+	Mint OPR/(const Mint &other)const{ return (*this)*(other^(M-2));}   // Only for Prime MOD
+	Mint& OPR+=(const Mint &other){ x+=other.x; if(x>=M) x-=M; return *this;}
+	Mint& OPR-=(const Mint &other){ x-=other.x; if(x<0) x+=M; return *this;}
+	Mint OPR++(int){ Mint temp=*this; *this+=1; return temp;}
+    Mint& OPR++(){ if(++x==M) x=0; return *this; }
+	Mint OPR--(int){ Mint temp=*this; *this-=1; return temp;}
+    Mint& OPR--(){ if(--x==-1) x=M-1; return *this; }
+	Mint& OPR*=(const Mint &other){ x=(x*1ll*other.x)%M; return *this;}
+	Mint& OPR^=(const Mint &other){ *this=*this^other; return *this;}
+	Mint& OPR/=(const Mint &other){ *this=*this/other; return *this;}
+	bool OPR==(const Mint &other)const{ return x==other.x;}
+	bool OPR!=(const Mint &other)const{ return x!=other.x;}
+	bool OPR<(const Mint &other)const{ return x<other.x;}
+	bool OPR>(const Mint &other)const{ return x>other.x;}
+	bool OPR<=(const Mint &other)const{ return x<=other.x;}
+	bool OPR>=(const Mint &other)const{ return x>=other.x;}
+
+	friend istream &OPR>>(istream &in,Mint &m){ in>>m.x; return in;}
+	friend ostream &OPR<<(ostream &out,const Mint &m){ out<<m.x; return out;}
+};
+inline Mint OPR+(int a, const Mint &b){ return Mint(a)+b;}
+inline Mint OPR-(int a, const Mint &b){ return Mint(a)-b;}
+inline Mint OPR*(int a, const Mint &b){ return Mint(a)*b;}
+inline Mint OPR^(int a, const Mint &b){ return Mint(a)^b;}
+inline Mint OPR/(int a, const Mint &b){ return Mint(a)/b;}
+inline bool OPR==(int a, const Mint &b){ return a==b.x;}
+inline bool OPR!=(int a, const Mint &b){ return a!=b.x;}
+inline bool OPR<(int a, const Mint &b){ return a<b.x;}
+inline bool OPR>(int a, const Mint &b){ return a>b.x;}
+inline bool OPR<=(int a, const Mint &b){ return a<=b.x;}
+inline bool OPR>=(int a, const Mint &b){ return a>=b.x;}
+
 int main(){
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
@@ -30,59 +73,29 @@ int main(){
     cin>>T;
     while(T--){
     	cin>>n;
-    	int a[n];
-    	ai(a,n);
-    	vi o,e;
-    	f(n){
-    		if(a[i]&1) o.pb(a[i]);
-    		else e.pb(a[i]);
-		}
-		if(e.size()>=2){
-			cout<<"1\n";
-			continue;
-		}
-		else{
-			if(e.size()){
-				int x = 0;
-				for(int odd:o){
-					if(odd < e[0]){
-						if(((e[0]%odd)%2)==0){
-							x = odd;
-							break;
-						}
-					}
-					else break;
-				}
-				if(x){
-					cout<<"1\n";
-					continue;
-				}
+    	string s;
+    	cin>>s;
+    	Mint ans=1;
+    	Mint pf=1, last=1, pow=1;
+    	Mint count=1;
+    	for(int i=1;i<n;i++){
+			Mint prev_count = count;
+    		if(pf>=2) count*=2;
+    		else if(s[i-1]=='(') count = last;
+    		else count += last;
+				cout<<((i==1)? "0 ":"")<<((s[i]==')')? count:0)<<" ";
+    		if(s[i-1]==')') last += prev_count;
+			pow *= 2;
+    		if(s[i]=='('){
+				pf++;
+				ans += pow;
 			}
-			n = o.size();
-			int x=0,y=0;
-			f(n-1){
-				if(((o[i+1]%o[i])%2)==0){
-					x=o[i];
-					y=o[i+1];
-					break;
-				}
-			}
-			if(x) cout<<"1\n";
 			else{
-				for(int i=0;i<n-1;i++){
-					for(int j=i+1;j<n;j++){
-						if(!((a[j]%a[i])&1)){
-							x = a[i];
-							y = a[j];
-							break;
-						}
-					}
-					if(x) break;
-				}
-				if(x) cout<<"1\n";
-				else cout<<"-1\n";
+				pf--;
+				ans += count;
 			}
 		}
+		cout<<ans<<"\n";
 	}
 	return 0;
 }
