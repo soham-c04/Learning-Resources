@@ -45,10 +45,15 @@ void sieve(){
 }
 void HP(){
 	hp[1]=1;
-	for(int i=2;i<N;i++) if(!hp[i]) for(int j=i;j<N;j+=i) hp[j]=i;
+	for(int i=2;i<N;i++){
+		if(!hp[i]){
+			for(int j=i;j<N;j+=i) hp[j]=i;
+		}
+	}
 }
-void prime_factors(vector<pi> &primef,int n){
+vector<pi> prime_factors(int n){
 	// Initialize hp[] First if not defined earlier.
+	vector<pi> primef;
 	while(n>1){
 		int pf=hp[n],cnt=0;
 		while(!(n%pf)){
@@ -57,9 +62,11 @@ void prime_factors(vector<pi> &primef,int n){
 		}
 		primef.pb({pf,cnt});
 	}
+	return primef;
 }
-void prime_factor(vector<pi> &primef,int n){
-	// Use Factorizer Template for supaaa fast
+vector<pi> prime_factor(int n){
+	// Use Factorizer Template for faster factorization
+	vector<pi> &primef;
 	for(int i=2;i*i<=n;i++){
 		int cnt=0;
 		while((n%i)==0){
@@ -69,6 +76,7 @@ void prime_factor(vector<pi> &primef,int n){
 		if(cnt) primef.pb({i,cnt});
 	}
 	if(n>1) primef.pb({n,1});
+	return primef;
 }
 int main(){
 	divisor();
