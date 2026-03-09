@@ -4,6 +4,8 @@ typedef long long ll;
 typedef vector<ll> vll;
 #define f(n) for(int i=0;i<(n);i++)
 
+// Verification - https://codeforces.com/contest/963/status [Participant:soham_c04]
+
 typedef unsigned long long ull;
 typedef __int128_t _int;
 typedef __uint128_t _uint;

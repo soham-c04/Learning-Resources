@@ -1,0 +1,13 @@
+- CP Handbook (Chapter 7 onwards)
+
+Number Theory - 
+1. Power Sum - Faulhaber's Formula (https://en.wikipedia.org/wiki/Faulhaber%27s_formula)
+
+Data Structures - 
+1. Bitset
+
+Range Queries -
+1. Sparse Segment Tree
+2. Persistent Segment Tree
+3. BIT (Fenwick Tree)
+4. 2D Segment Tree
