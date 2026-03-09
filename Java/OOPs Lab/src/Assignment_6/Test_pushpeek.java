@@ -5,19 +5,24 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
 
-public class Test_push {
-    void single_test(ArrayList<Integer> inputs){    // Series of insertions with last as member to be checked
-        Stack<Integer> stk = new Stack<>();
-        assertEquals(oracle.contains(inputs.get(i)), code.member(inputs.get(i)));
+public class Test_pushpeek {
+    <T> void single_test(ArrayList<T> inputs){    // Series of insertions with last as member to be checked
+        Stack<T> oracle = new Stack<>();
+        MyStack<T> code = new MyStack<>();
+        for(T i:inputs){
+            oracle.push(i);
+            code.push(i);
+            assertEquals(oracle.peek(), code.peek());
+        }
     }
 
     // Does both branch and sentence coverage
     @Test
-    void increase(){ single_test(new ArrayList<>(Arrays.asList(1,2,3,4))); }
+    void intarray(){ single_test(new ArrayList<>(Arrays.asList(1,2,3,4))); }
     @Test
-    void decrease(){ single_test(new ArrayList<>(Arrays.asList(4,3,2,1))); }
+    void strarray(){ single_test(new ArrayList<>(Arrays.asList("a","e","w","b"))); }
     @Test
-    void constant(){ single_test(new ArrayList<>(Arrays.asList(1,1,1,1))); }
+    void floatarr(){ single_test(new ArrayList<>(Arrays.asList(3.14, 2.71, 1.41, 2.23))); }
 
     @Test
     void multi_test() {

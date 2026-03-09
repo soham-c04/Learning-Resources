@@ -2,10 +2,10 @@ package Assignment_6;
 
 import java.util.ArrayList;
 
-public class Stack<T>{
+public class MyStack<T>{
     private ArrayList<T> stack;
 
-    public Stack() {
+    public MyStack() {
         stack = new ArrayList<>();
     }
     public void push(T item){
