@@ -22,18 +22,11 @@ ll rand_num(ll a, ll b){
 
 int main(int argc, char* argv[]){
 	cout<<"1\n";
-	int n = 2*rand_num(8,13);
-	int pf=0;
+	int n = rand_num(2,5);
 	cout<<n<<"\n";
 	f(n){
-		char c;
-		if(pf==0) c='(';
-		else if(n-i==pf) c=')';
-		else c=(rand_num(0,1)? '(':')');
-		cout<<c;
-		if(c=='(') pf++;
-		else pf--;
+		for(int j=0;j<n;j++) cout<<rand_num(0,1);
+		cout<<"\n";
 	}
-	cout<<"\n";
 	return 0;
 }
