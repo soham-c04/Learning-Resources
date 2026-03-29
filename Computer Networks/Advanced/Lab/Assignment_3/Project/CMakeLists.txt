@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5)
+project(play)
+find_package(OpenCV REQUIRED)
+include_directories(${opencv_include_dirs})
+add_executable(play src/play.cpp)
+target_link_libraries(play ${OpenCV_LIBS})

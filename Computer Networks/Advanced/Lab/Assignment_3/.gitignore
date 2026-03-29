@@ -1,0 +1,5 @@
+# CMake Build Files
+build/
+
+# .mp4 file > 100MB
+sintel-1024-surround.mp4

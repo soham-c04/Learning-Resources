@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5)
+project(Assignment_3)
+find_package(OpenCV REQUIRED)
+include_directories(${opencv_include_dirs})
+add_executable(client1 client1.cpp)
+add_executable(client2 client2.cpp)
+target_link_libraries(client1 ${OpenCV_LIBS})
+target_link_libraries(client2 ${OpenCV_LIBS})
