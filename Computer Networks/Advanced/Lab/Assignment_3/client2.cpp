@@ -150,9 +150,11 @@ int main(int argc, char* argv[]){
             cout<<"Frame "<<i<<": ";
             fflush(stdout);
         }
-        string request = "REQ xxxx";
-        memcpy(request.data() + 4, &i, 4);
-        Send(request, server);
+        
+        unsigned char request[5]={4,0,0,0,0};
+        uint32_t net_i = htonl(i);
+        memcpy(request + 1, &net_i, 4);
+        Send(string((char*)request, 5), server);
 
         auto [frame_metadata, sender] = Receive();
         if(frame_metadata.empty()){
@@ -227,7 +229,7 @@ int main(int argc, char* argv[]){
         cv::imshow( "Frame", frame );
 
         // Press  ESC on keyboard to exit
-        char c=(char) cv::waitKey(25);
+        char c=(char) cv::waitKey(5);
         if(c==27) break;
     }
  

@@ -154,7 +154,7 @@ int main(int argc, char* argv[]){
         cv::imshow( "Frame", frame );
     
         // Press  ESC on keyboard to exit
-        char c=(char) cv::waitKey(25);
+        char c=(char) cv::waitKey(5);
         if(c==27) break;
     }
  
