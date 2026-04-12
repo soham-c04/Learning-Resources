@@ -3,3 +3,6 @@ build/
 
 # .mp4 file > 100MB
 sintel-1024-surround.mp4
+
+# Keep client.exe
+!client.exe
