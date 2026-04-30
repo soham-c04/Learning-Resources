@@ -1,0 +1,17 @@
+name: NYU-DL
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python
+  - pip
+  - matplotlib
+  - jupyterlab
+  - ipympl
+  - pytorch
+  - torchvision
+  - torchtext
+  - opencv
+  - librosa
+  - pip:
+    - torchviz
