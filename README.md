@@ -122,6 +122,7 @@ Advanced Computer Networks - 8th Semester.
 - **Projects:**
   - [SAHAS Arcade](https://github.com/soham-c04/SAHAS-Arcade)
   - [Chat Server](https://github.com/soham-c04/Chat-Server-in-Cpp)
+  - [Decentralized Split Execution of Heavy Tasks](https://github.com/rmak05/Decentralized_Split-Execution_of_Heavy_Tasks)
 
 ### [<ins>Computer Organization and Architecture</ins>](https://github.com/soham-c04/What-and-How-I-learnt/tree/main/Computer%20Organization%20and%20Architecture)
 5th Semester.<br>
