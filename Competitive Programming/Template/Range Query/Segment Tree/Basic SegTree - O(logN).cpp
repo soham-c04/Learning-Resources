@@ -81,12 +81,12 @@ typedef class SegmentTree{
 	public:
   		SegmentTree(int arr[], int n){
 			this->n=n;
-			f(n) a[i]=arr[i];
+			memcpy(a, arr, sizeof(arr));
 			Build(0,0,n-1);
 		}
 		SegmentTree(vi &v){
 			this->n=v.size();
-			f(n) a[i]=v[i];
+			copy(v.begin(), v.end(), a);
 			Build(0,0,n-1);
 		}
 
